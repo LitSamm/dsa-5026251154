@@ -35,4 +35,4 @@ public abstract class PrintJob implements Chargeable {
     public String summary() {
         return getId() + " | " + label() + " | " + calculateCharge();
     }
-}
+}   

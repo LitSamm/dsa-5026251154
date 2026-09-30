@@ -24,7 +24,7 @@ public class Main {
             String type = scanner.next();
             String id = scanner.next();
             int days = scanner.nextInt();
-            orderUnits[i] = scanner.nextInt(); // Menyimpan jumlah units
+            orderUnits[i] = scanner.nextInt(); 
 
             if (type.equals("MOTORCYCLE")) {
                 washes[i] = new MotorcycleWash(id, days);
@@ -35,7 +35,6 @@ public class Main {
 
         scanner.close();
 
-        // Mengalikan dengan units saat mencetak agar sesuai dengan Expected Output
         for (int i = 0; i < washes.length; i++) {
             System.out.println(washes[i].getId() + " | " + washes[i].label() + " | " + washes[i].calculateCharge(orderUnits[i]));
         }

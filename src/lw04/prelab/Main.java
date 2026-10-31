@@ -1,18 +1,14 @@
 package lw04.prelab;
 
-import java.io.InputStream;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        InputStream input = Main.class.getResourceAsStream("branches.txt");
-        if (input == null) {
-            throw new IllegalStateException("branches.txt was not found");
-        }
+        Scanner scanner = new Scanner(Main.class.getResourceAsStream("orders.txt"));
 
         int[] branches;
         int[] targets;
-        try (Scanner scanner = new Scanner(input)) {
+        try (scanner) {
             int branchCount = scanner.nextInt();
             branches = new int[branchCount];
             for (int i = 0; i < branchCount; i++) {
